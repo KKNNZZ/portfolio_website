@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,13 +78,10 @@
                             pre-trained model (mobilnet_v2-b0353104.pth) known for its efficiency. The models have not
                             yet been been optimalized by fine-tuning the super-parameters. Some rare animals
                             might not be known to the CNN and ResNet-50 models, so surprises are always around the
-                            corner!</p>
+                            corner!
                         <p>
                             Got a photo of an animal? Upload it and see which model nails the classification. Discover
-                            how modern tech recognizes the animal kingdom.</p>
-                        <p>
-                            Simple CNN and ResNet50 Models not yet available due to large size, will be added soon!
-                        </p>
+                            how modern tech recognizes the animal kingdom.
                         </p>
                         <br>
 
@@ -100,13 +96,13 @@
                                 <strong>MobileNetV2:</strong> <span class="mnv2-output"></span>
                             </div>
                             <br>
-                            <!-- <div id="result-cnn">
+                            <div id="result-cnn">
                                 <strong>Simple CNN:</strong> <span class="cnn-output"></span>
                             </div>
                             <br>
                             <div id="result-rn50">
                                 <strong>ResNet-50:</strong> <span class="rn50-output"></span>
-                            </div> -->
+                            </div>
                         </div>
 
                         <script>
@@ -121,8 +117,8 @@
                                     .then(response => response.json())
                                     .then(data => {
                                         document.querySelector('.mnv2-output').innerText = data.mnv2;
-                                        // document.querySelector('.cnn-output').innerText = data.cnn;
-                                        // document.querySelector('.rn50-output').innerText = data.rn50;
+                                        document.querySelector('.cnn-output').innerText = data.cnn;
+                                        document.querySelector('.rn50-output').innerText = data.rn50;
                                     })
                                     .catch(error => {
                                         console.error('Error:', error);
@@ -137,8 +133,8 @@
                                 .then(data => {
                                     console.log("Received data:", data);
                                     document.querySelector('.mnv2-output').innerText = data.mnv2;
-                                    // document.querySelector('.cnn-output').innerText = data.cnn;
-                                    // document.querySelector('.rn50-output').innerText = data.rn50;
+                                    document.querySelector('.cnn-output').innerText = data.cnn;
+                                    document.querySelector('.rn50-output').innerText = data.rn50;
                                 })
                                 .catch(error => {
                                     console.error('Error:', error);
@@ -164,8 +160,8 @@
                             .then(response => response.json())
                             .then(data => {
                                 document.querySelector('.mnv2-output').innerText = data.mnv2;
-                                // document.querySelector('.cnn-output').innerText = data.cnn;
-                                // document.querySelector('.rn50-output').innerText = data.rn50;
+                                document.querySelector('.cnn-output').innerText = data.cnn;
+                                document.querySelector('.rn50-output').innerText = data.rn50;
 
                                 // Update the image source here
                                 const uploadedImageElement = document.getElementById('uploadedImage');
@@ -217,224 +213,4 @@
     <script type="text/javascript" src="./static/main.70a66962.js"></script>
 </body>
 
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta content="description" name="description">
-    <meta name="google" content="notranslate" />
-    <meta content="Mashup templates have been developed by Orson.io team" name="author">
-
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
-    <link href="./static/assets/favicon.ico" rel="icon">
-
-    <title>Animal Classification</title>
-
-    <link href="./static/main.3f6952e4.css" rel="stylesheet">
-</head>
-
-<body class="">
-    <div id="site-border-left"></div>
-    <div id="site-border-right"></div>
-    <div id="site-border-top"></div>
-    <div id="site-border-bottom"></div>
-    <!-- Add your content of header -->
-    <header>
-        <nav class="navbar  navbar-fixed-top navbar-default">
-            <div class="container">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav ">
-                        <li><a href="./index.html" title="">Home</a></li>
-                        <li><a href="./portfolio.html" title="">Portfolio</a></li>
-                        <li><a href="./about.html" title="">About me</a></li>
-                        <li><a href="./contact.html" title="">Contact</a></li>
-                    </ul>
-
-
-                    <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-                        <li><a href="./work1.html" title="">001/006</a></li>
-                        <li><a href="./work2.html" title="">002/006</a></li>
-                        <li><a href="./work3.html" title="" class="active">003/006</a></li>
-                        <li><a href="./work4.html" title="">004/006</a></li>
-                        <li><a href="./work5.html" title="">005/006</a></li>
-                        <li><a href="./work6.html" title="">006/006</a></li>
-                    </ul>
-
-
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="section-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <img src="./static/assets/images/work001-01.jpg" class="img-responsive" alt="">
-                    <div class="card-container">
-                        <div class="text-center">
-                            <h1 class="h2">Which Animal am I? Performance by Different ML Models
-                            </h1>
-                        </div>
-                        <p><br>
-                            Welcome to the Animal Classifier! Check this Machine Learning tool out by uploading an image
-                            of an animal and test three powerful algorithms: MobileNetV2, Simple CNN, and ResNet-50.
-                            While the Simple
-                            CNN and ResNet-50 were trained on a diverse dataset of 151 animals, MobileNetV2 uses a
-                            pre-trained model (mobilnet_v2-b0353104.pth) known for its efficiency. The models have not
-                            yet been been optimalized by fine-tuning the super-parameters. Some rare animals
-                            might not be known to the CNN and ResNet-50 models, so surprises are always around the
-                            corner!</p>
-                        <p>
-                            Got a photo of an animal? Upload it and see which model nails the classification. Discover
-                            how modern tech recognizes the animal kingdom.</p>
-                        <p>
-                            Simple CNN and ResNet50 Models not yet available due to large size, will be added soon!
-                        </p>
-                        </p>
-                        <br>
-
-                        <form id="imageUploadForm" enctype="multipart/form-data">
-                            <input type="file" name="imageFile" id="imageFile">
-                            <button type="button" onclick="uploadImage()">Upload</button>
-                        </form>
-                        <br>
-                        <div id="response"></div>
-                        <div id="classification-result">
-                            <div id="result-mnv2">
-                                <strong>MobileNetV2:</strong> <span class="mnv2-output"></span>
-                            </div>
-                            <br>
-                            <!-- <div id="result-cnn">
-                                <strong>Simple CNN:</strong> <span class="cnn-output"></span>
-                            </div>
-                            <br>
-                            <div id="result-rn50">
-                                <strong>ResNet-50:</strong> <span class="rn50-output"></span>
-                            </div> -->
-                        </div>
-
-                        <script>
-                            function uploadImage() {
-                                const formData = new FormData();
-                                formData.append('imageFile', document.getElementById('imageFile').files[0]);
-
-                                fetch('/upload', {
-                                    method: 'POST',
-                                    body: formData
-                                })
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        document.querySelector('.mnv2-output').innerText = data.mnv2;
-                                        // document.querySelector('.cnn-output').innerText = data.cnn;
-                                        // document.querySelector('.rn50-output').innerText = data.rn50;
-                                    })
-                                    .catch(error => {
-                                        console.error('Error:', error);
-                                    });
-                            }
-
-                            fetch('/upload', {
-                                method: 'POST',
-                                body: formData
-                            })
-                                .then(response => response.json())
-                                .then(data => {
-                                    console.log("Received data:", data);
-                                    document.querySelector('.mnv2-output').innerText = data.mnv2;
-                                    // document.querySelector('.cnn-output').innerText = data.cnn;
-                                    // document.querySelector('.rn50-output').innerText = data.rn50;
-                                })
-                                .catch(error => {
-                                    console.error('Error:', error);
-                                });
-
-                        </script>
-
-                    </div>
-                </div>
-
-                <div class="col-xs-12">
-                    <img id="uploadedImage" class="img-responsive" alt="">
-                </div>
-                <script>
-                    function uploadImage() {
-                        const formData = new FormData();
-                        formData.append('imageFile', document.getElementById('imageFile').files[0]);
-
-                        fetch('/upload', {
-                            method: 'POST',
-                            body: formData
-                        })
-                            .then(response => response.json())
-                            .then(data => {
-                                document.querySelector('.mnv2-output').innerText = data.mnv2;
-                                // document.querySelector('.cnn-output').innerText = data.cnn;
-                                // document.querySelector('.rn50-output').innerText = data.rn50;
-
-                                // Update the image source here
-                                const uploadedImageElement = document.getElementById('uploadedImage');
-                                uploadedImageElement.src = 'uploaded_image.jpg';
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                            });
-                    }
-                </script>
-
-            </div>
-        </div>
-    </div>
-
-
-    <footer class="footer-container text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>© 2023 KURIZI | Website created by Vitor Kenzo Kuramae Izioka | <a
-                            href="https://github.com/KKNNZZ/portfolio/" title="Website repository"
-                            target="_blank">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            navActivePage();
-        });
-    </script>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
-
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-XXXXX-X', 'auto');
-  ga('send', 'pageview');
-</script>
-
--->
-    <script type="text/javascript" src="./static/main.70a66962.js"></script>
-</body>
-
->>>>>>> d5fae94e02ec3ae4f46bf0788aa945c725abaf6e
 </html>
