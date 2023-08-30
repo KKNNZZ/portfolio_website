@@ -105,8 +105,13 @@
                             </div>
                         </div>
 
+                        <div class="col-xs-12">
+                            <img id="uploadedImage" class="img-responsive" alt="">
+                        </div>
+
                         <script>
                             function uploadImage() {
+                                console.log('Upload button clicked');
                                 const formData = new FormData();
                                 formData.append('imageFile', document.getElementById('imageFile').files[0]);
 
@@ -116,15 +121,23 @@
                                 })
                                     .then(response => response.json())
                                     .then(data => {
+                                        console.log('Received data:', data);
                                         document.querySelector('.mnv2-output').innerText = data.mnv2;
                                         document.querySelector('.cnn-output').innerText = data.cnn;
                                         document.querySelector('.rn50-output').innerText = data.rn50;
+
+                                        // Update the image source here
+                                        const uploadedImageElement = document.getElementById('uploadedImage');
+                                        console.log('uploadedImageElement:', uploadedImageElement); // Check if element is found
+                                        uploadedImageElement.src = 'uploaded_image.jpg';
                                     })
                                     .catch(error => {
                                         console.error('Error:', error);
                                     });
                             }
+                        </script>
 
+                        <!-- <script>
                             fetch('/upload', {
                                 method: 'POST',
                                 body: formData
@@ -171,32 +184,32 @@
                                 console.error('Error:', error);
                             });
                     }
-                </script>
+                </script> -->
 
-            </div>
-        </div>
-    </div>
-
-
-    <footer class="footer-container text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>© 2023 KURIZI | Website created by Vitor Kenzo Kuramae Izioka | <a
-                            href="https://github.com/KKNNZZ/portfolio/" title="Website repository"
-                            target="_blank">GitHub</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            navActivePage();
-        });
-    </script>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+            <footer class="footer-container text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>© 2023 KURIZI | Website created by Vitor Kenzo Kuramae Izioka | <a
+                                    href="https://github.com/KKNNZZ/portfolio/" title="Website repository"
+                                    target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function (event) {
+                    navActivePage();
+                });
+            </script>
+
+            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
 
 <script>
   (function (i, s, o, g, r, a, m) {
@@ -210,7 +223,7 @@
 </script>
 
 -->
-    <script type="text/javascript" src="./static/main.70a66962.js"></script>
+            <script type="text/javascript" src="./static/main.70a66962.js"></script>
 </body>
 
 </html>
